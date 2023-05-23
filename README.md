@@ -76,3 +76,24 @@ Esse erro esta relacionado à imcompatibilidade entre o funcionamento do softwar
 **ATENÇÃO! MUITO CUIDADO PARA NÃO ALTERAR MAIS NENHUMA LINHA DOS ARQUIVOS MENCIONADOS, UMA VEZ QUE ISSO PODE OCASIONAR COMPORTAMENTO INESPERADO DO UBUNTU.**
 
 Isso deve ser suficiente para que o software funcione corretamente.
+
+### 4. Instalação do ASE
+Para maiores informações e acesso ao manual do software, acesse: (https://wiki.fysik.dtu.dk/ase/)[https://wiki.fysik.dtu.dk/ase/].
+Para o funcionamento do ASE, é necessario ter instalado:
+- Python 3.6 (ou mais recente);
+- Numpy;
+- SciPy;
+- Matplotlib;
+
+As três últimas dependências podem ser instaladas com o `pip`:
+```
+pip install numpy
+pip install scipy
+pip install matplotlib
+```
+Depois de instalar as dependências, o ASE pode ser instalado com o comando:
+```
+pip install --upgrade --user ase
+```
+
+
