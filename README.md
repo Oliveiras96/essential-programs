@@ -14,7 +14,11 @@ Para visualização e manipulação de estruturas:
 3. Atomic Simulation Environment (ASE);
 4. VMD;
 
-### 3. Instalação do XcrysDen:
+Implementações de DFT:
+1. SIESTA;
+2. Quantum ESPRESSO;
+
+### 2. Instalação do XcrysDen:
 Para informações completas sobre o software, consulte (http://www.xcrysden.org)[http://www.xcrysden.org].
 
 1. Baixar o arquivo compactado com os códigos pré-compliados (binário) do xcrysden versão 1.6 para linux 64 bits: (http://www.xcrysden.org/Download.html)[http://www.xcrysden.org/Download.html] ou:
@@ -77,7 +81,7 @@ Esse erro esta relacionado à imcompatibilidade entre o funcionamento do softwar
 
 Isso deve ser suficiente para que o software funcione corretamente.
 
-### 4. Instalação do ASE
+### 3. Instalação do ASE
 Para maiores informações e acesso ao manual do software, acesse: (https://wiki.fysik.dtu.dk/ase/)[https://wiki.fysik.dtu.dk/ase/].
 Para o funcionamento do ASE, é necessario ter instalado:
 - Python 3.6 (ou mais recente);
@@ -95,5 +99,34 @@ Depois de instalar as dependências, o ASE pode ser instalado com o comando:
 ```
 pip install --upgrade --user ase
 ```
+### Método alternativo para instalar o ASE utilizando o conda:
+
+```
+# Criar um novo environment (altamante recomendado para evitar conflitos):
+conda create -n ase
+conda activate ase
+conda install -y -c conda-forge
+```
+
+## Instalação SIESTA:
+A forma mais simples de instalar o SIESTA em paralello é utilizar o conda:
+```
+conda create -n siesta
+conda activate siesta
+conda install -y -c conda-forge "siesta=*=*openmpi*"
+```
+Todas as dependências serão instaladas e o siesta poderá ser rodado cem paralelo com o ccomando:
+```
+OMP_NUM_THREADS=1 siesta < input.fdf > job.out
+````
+
+## Instalação do Quantum ESPRESSO:
+
+```
+conda create -n qespresso
+conda activate qespresso
+conda install -y -c conda-forge qe
+```
+
 
 
